@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>AJVV Paião - Ribeirão Preto</title>
+	<link rel="icon" href="img/logo.png" type="image/x-icon">
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <!-- CSS Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <!-- SwiperJS -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" type="text/css">
+    <script src="js/swiper-bundle.min.js"></script>
+
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="css/leaflet.css" type="text/css">
+    <script src="js/leaflet.js"></script>
+</head>
+
+<body>
+    <!-- Preloder -->
+    <div id="preloder" class="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Offcanvas Menu -->
+    <div class="offcanvas__menu__overlay"></div>
+    <div class="offcanvas__menu__wrapper">
+        <div class="canvas__close">
+            <span class="fa fa-times-circle-o"></span>
+        </div>
+        <div class="offcanvas__logo">
+            <a href=""><img src="img/logo.png"></a>
+        </div>
+        <nav class="offcanvas__menu mobile-menu">
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#atividades">Atividades</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#apoie">Apoie</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+        <div id="mobile-menu-wrap"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3">
+                    <div class="header__logo">
+                        <a href=""><img src="img/logo.png"> AJVV Paião</a>
+                    </div>
+                </div>
+                <div class="col-lg-9 col-md-9">
+                    <nav class="header__menu">
+                        <ul>
+                            <li class="active"><a href="#inicio">Início</a></li>
+                            <li><a onclick="changeActive(event)" href="#sobre">Sobre</a></li>
+                            <li><a onclick="changeActive(event)" href="#atividades">Atividades</a></li>
+                            <li><a onclick="changeActive(event)" href="#galeria">Galeria</a></li>
+                            <li><a onclick="changeActive(event)" href="#apoie">Apoie</a></li>
+                            <li><a onclick="changeActive(event)" href="#contato">Contato</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="canvas__open">
+                <span class="fa fa-bars"></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Inicio -->
+    <section id="inicio" class="hero-section">
+        <div class="hero__slider owl-carousel">
+            <div class="hero__item set-bg" data-setbg="img/background.jpg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="hero__text">
+                                <h5>Curabitur ullamcorper</h5>
+                                <h2>Etiam magna est, condimentum quis magna a vestibulum</h2>
+                                <a href="#sobre" class="primary-btn">Sobre nós</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="hero__img">
+                                <img src="img/soccer-junior.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero__item set-bg" data-setbg="img/background.jpg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="hero__text">
+                                <h5>Nulla sit amet congue quam</h5>
+                                <h2>Fusce elementum lectus eu auctor euismod. Lorem ipsum dolor sit amet</h2>
+                                <a href="#apoie" class="primary-btn">Apoie</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="hero__img">
+                                <img src="img/soccer-junior.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sessão Sobre -->
+    <section id="sobre" class="about-section spad">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-10">
+                    <div class="about__text">
+                        <div class="section-title">
+                            <h3>Quem nós somos</h3>
+                            <small>Assosiação Jovens Valorizando a Vida</small>
+                        </div>
+                        <div class="section-text">
+                            <h5>
+                                Vivamus venenatis convallis interdum. Quisque ac lacus at est vestibulum semper. 
+                                Pellentesque tincidunt tortor consectetur, sodales nunc tincidunt, efficitur nibh. 
+                                Mauris ullamcorper lacinia ipsum quis feugiat. Pellentesque eu est et massa cursus dignissim. 
+                                Nulla facilisi. Donec cursus pharetra ligula ut rhoncus. Duis eget dolor vitae leo gravida condimentum.
+                                Cras sit amet ullamcorper eros, et efficitur tortor. Integer eu mauris eu ligula sagittis ultricies vel nec dui. 
+                                Fusce ultricies dolor ut venenatis accumsan. Nunc hendrerit dignissim purus.
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-between about__icons">
+                <div class="text-center">
+                    <img src="img/svg/football.png">
+                    <p>250 Partidas</p>
+                </div>
+                <div class="text-center">
+                    <img src="img/svg/world-cup.png">
+                    <p>62 Campeonatos</p>
+                </div>
+                <div class="text-center">
+                    <img src="img/svg/female-soccer-player.png">
+                    <p>120 Atletas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sessão Atividades -->
+    <section id="atividades" class="activities-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h3>Um pouco do que fazemos</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="activities__item">
+                        <h5>Donec dapibus</h5>
+                        <span>sapien vel eros egestas</span>
+                        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="activities__item">
+                        <h5>Nullam hendrerit</h5>
+                        <span>volutpat risus</span>
+                        <p>Duis vel commodo felis. In felis metus, faucibus vitae aliquam id, imperdiet ut diam</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="activities__item">
+                        <h5>Morbi vel risus</h5>
+                        <span>feugiat elit nec</span>
+                        <p>Etiam augue est, porttitor eu fringilla et, condimentum vel leo pellentesque eget leo est</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="activities__item">
+                        <h5>Arcu Sollicitudin</h5>
+                        <span>lacinia mauris</span>
+                        <p>Praesent vel cursus leo, eget vulputate sapien praesent eget elit et purus egestas</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="activities__item">
+                        <h5>Donec dapibus</h5>
+                        <span>sapien vel eros egestas</span>
+                        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="activities__item">
+                        <h5>Nullam hendrerit</h5>
+                        <span>volutpat risus</span>
+                        <p>Duis vel commodo felis. In felis metus, faucibus vitae aliquam id, imperdiet ut diam</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sessão Galeria -->
+    <section id="galeria" class="gallery-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 col-md-7">
+                    <div class="section-title normal-title">
+                        <h3>Nosso orgulho e paixão</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row active">
+                <div class="swiper gallery-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="img/galeria/1.jpeg">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/galeria/2.jpeg">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/galeria/4.jpeg">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/galeria/5.jpeg">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/galeria/6.jpeg">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/galeria/8.jpeg">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/galeria/10.jpeg">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/galeria/11.jpeg">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/galeria/12.jpeg">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/galeria/13.jpeg">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/galeria/14.jpeg">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/galeria/15.jpeg">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/galeria/16.jpeg">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/galeria/17.jpeg">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/galeria/18.jpeg">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/galeria/19.jpeg">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/galeria/20.jpeg">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sessão Apoie -->
+    <section id="apoie" class="donate-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <img src="img/soccer-friend.png">
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="donate__text">
+                        <h3>Praesent vitae nulla sem. Donec eu quam fermentum, venenatis magna vitae, sagittis nunc</h3>
+                        <img width="280" height="320" src="data:image/png;base64,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">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contato" class="footer-section">
+        <div class="footer__top">
+            <div class="container">
+                <div class="row d-flex justify-content-center text-center">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="footer__top-auth">
+                            <h5>Lorem ipsum dolor sit amet</h5>
+                            <div class="d-flex justify-content-center">
+                                <a href="#" target="_blank" class="primary-btn"><i class="fa fa-whatsapp"></i></a>
+                                <a href="#" target="_blank" class="primary-btn"><i class="fa fa-facebook"></i></a>
+                                <a href="#" target="_blank" class="primary-btn"><i class="fa fa-instagram"></i></a>
+                                <a href="#" target="_blank" class="primary-btn"><i class="fa fa-youtube"></i></a>
+                                <a href="#" target="_blank" class="primary-btn"><i class="fa fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__text set-bg" data-setbg="img/footer-bg.png">
+            <div class="container">
+                <div class="row d-flex justify-content-between">
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="footer__text-about">
+                            <div class="footer__logo">
+                                <img src="img/logo.png">
+                                <p>Assosiação Jovens Valorizando a Vida</p>
+                            </div>
+                            <ul>
+                                <li>Ribeirão Preto - SP</li>
+                                <li>R. Cel. Américo Batista - Ipiranga</li>
+                                <li>Parque Tom Jobim</li>
+                                <li>Tel: (16) 3604-1555</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="footer__text-about">
+                            <div id="mapa" style="height: 260px; z-index: 1001"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__text-copyright">
+                    <p>
+                        Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script> 
+                        Todos os direitos reservados | Gustavo Lisi | Nova Digitalização | AJVV Paião
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        var swiper = new Swiper(".gallery-swiper", {
+            slidesPerView: 1,
+            initialSlide: 1,
+            spaceBetween: 30,
+            grabCursor: true,
+            centeredSlides: true,
+            loop: true,
+            height: '400px',
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: true,
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                },
+                768: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 2,
+                }
+            },
+        });
+    </script>
+
+    <script>
+        let cities = {"Parque Tom Jobim - R. Cel. Américo Batista - Ipiranga, Ribeirão Preto - SP": [-21.1332713, -47.8343945]};
+        let map = L.map('mapa').setView([-21.1332713, -47.8343945], 12);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '© OpenStreetMap contributors'}).addTo(map);
+
+        let orangeIcon = new L.Icon({
+            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+            iconSize: [25, 41],
+            iconAnchor: [12, 41],
+            popupAnchor: [1, -34],
+        });
+        
+        for (var city in cities) {
+            L.marker(cities[city], { icon: orangeIcon }).addTo(map).bindPopup(city);
+        }
+    </script>
+
+    <script>
+        function changeActive(event) {
+            var previousActive = document.querySelector('.header__menu .active');
+            if (previousActive) {
+                previousActive.classList.remove('active');
+            }
+
+            var currentLink = event.target;
+            currentLink.parentNode.classList.add('active');
+        }
+    </script>
+</body>
+
+</html>

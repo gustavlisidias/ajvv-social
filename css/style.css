@@ -502,14 +502,15 @@ ol {
 	padding-bottom: 60px;
 }
 
-.gallery-section .swiper {
-	height: 460px;
-	margin: 0px 15px !important;
+.gallery-section .row-galeria { 
+	display: flex;
+	justify-content: center;
 }
 
-.gallery-section .swiper .swiper-wrapper .swiper-slide img {
-	height: 100%;
-	width: 100%;
+.gallery-section .galleria { 
+	width: 97%; 
+	height: 460px; 
+	background: var(--dark);
 }
 
 

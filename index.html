@@ -19,10 +19,6 @@
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
 
-    <!-- SwiperJS -->
-    <link rel="stylesheet" href="css/swiper-bundle.min.css" type="text/css">
-    <script src="js/swiper-bundle.min.js"></script>
-
     <!-- Leaflet -->
     <link rel="stylesheet" href="css/leaflet.css" type="text/css">
     <script src="js/leaflet.js"></script>
@@ -233,63 +229,37 @@
                     </div>
                 </div>
             </div>
-            <div class="row active">
-                <div class="swiper gallery-swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="img/galeria/1.jpeg">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/galeria/2.jpeg">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/galeria/4.jpeg">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/galeria/5.jpeg">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/galeria/6.jpeg">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/galeria/8.jpeg">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/galeria/10.jpeg">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/galeria/11.jpeg">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/galeria/12.jpeg">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/galeria/13.jpeg">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/galeria/14.jpeg">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/galeria/15.jpeg">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/galeria/16.jpeg">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/galeria/17.jpeg">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/galeria/18.jpeg">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/galeria/19.jpeg">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/galeria/20.jpeg">
-                        </div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
+            <div class="row row-galeria">
+                <div class="galleria">
+                    <img src="img/galeria/2.jpeg">
+                    <img src="img/galeria/4.jpeg">
+                    <img src="img/galeria/5.jpeg">
+                    <img src="img/galeria/6.jpeg">
+                    <img src="img/galeria/7.jpeg">
+                    <img src="img/galeria/8.jpeg">
+                    <img src="img/galeria/10.jpeg">
+                    <img src="img/galeria/11.jpeg">
+                    <img src="img/galeria/12.jpeg">
+                    <img src="img/galeria/13.jpeg">
+                    <img src="img/galeria/14.jpeg">
+                    <img src="img/galeria/15.jpeg">
+                    <img src="img/galeria/16.jpeg">
+                    <img src="img/galeria/17.jpeg">
+                    <img src="img/galeria/18.jpeg">
+                    <img src="img/galeria/19.jpeg">
+                    <img src="img/galeria/20.jpeg">
+                    <img src="img/galeria/21.jpeg">
+                    <img src="img/galeria/22.jpeg">
+                    <img src="img/galeria/23.jpeg">
+                    <img src="img/galeria/24.jpeg">
+                    <img src="img/galeria/25.jpeg">
+                    <img src="img/galeria/26.jpeg">
+                    <img src="img/galeria/27.jpeg">
+                    <img src="img/galeria/28.jpeg">
+                    <img src="img/galeria/29.jpeg">
+                    <img src="img/galeria/30.jpeg">
+                    <img src="img/galeria/31.jpeg">
+                </div>                
             </div>
         </div>
     </section>
@@ -371,36 +341,17 @@
     <script src="js/jquery.slicknav.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="galleria/galleria.min.js"></script>
 
     <script>
-        var swiper = new Swiper(".gallery-swiper", {
-            slidesPerView: 1,
-            initialSlide: 1,
-            spaceBetween: 30,
-            grabCursor: true,
-            centeredSlides: true,
-            loop: true,
-            height: '400px',
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: true,
-            },
-            breakpoints: {
-                640: {
-                    slidesPerView: 1,
-                },
-                768: {
-                    slidesPerView: 2,
-                },
-                1024: {
-                    slidesPerView: 2,
-                }
-            },
-        });
+        (function() {
+            Galleria.loadTheme("galleria/themes/twelve/galleria.twelve.min.js");
+            Galleria.run('.galleria', {
+                transition: 'fade',
+                imageCrop: true,
+                autoplay: 3000
+            });
+        }());
     </script>
 
     <script>

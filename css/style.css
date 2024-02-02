@@ -88,7 +88,7 @@ ol {
 }
 
 ::-webkit-scrollbar-track {
-	background-color: var(--background);
+	background-color: var(--dark);
 }
 
 .section-title {
